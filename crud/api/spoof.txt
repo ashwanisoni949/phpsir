@@ -1,0 +1,26 @@
+1. method spoofing :
+
+form : method --> get | post
+postman : request --> formdata --> get or post
+form  : get,post
+put 1. Raw data 
+Delete 1 : Raw data
+
+Get : formdata ,raw data
+post : formdat , raw data
+
+put => data raw ---> Request: PUT
+delete => data raw ---> Raw Request : DELETE
+
+formdata = PUT => method : post and _method = PUT => data :formdata
+
+2. JWT:- Json web token
+3. why is by default expiry time of jwt ? 20 Minute.
+4. What is use Token ?
+    for Authentication Purpose.
+
+
+    
+
+
+

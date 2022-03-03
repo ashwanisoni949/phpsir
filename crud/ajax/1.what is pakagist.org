@@ -1,0 +1,3 @@
+1.what is pakagist.org
+2. what is composer.
+3. what is dependency injection.

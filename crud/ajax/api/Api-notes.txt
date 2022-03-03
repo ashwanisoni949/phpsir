@@ -1,0 +1,206 @@
+what is Api:-
+Api stands for Application Programming Interface.
+Api is a Mechanism by using which One Type Application Can communicate with Another
+Application.
+In general Api is very Big Topic.
+
+Api are used by different Application to data, from one plateform to another plateform
+Worldometer.com Corona Virus Api
+Any Application A,B,C,D,E,F,G can utilise the Api of Worldmeter.com to get live update
+of corona.
+
+1. InterOperability : Conversion of one type of language to some common langauge so
+that data can be exchanged without directly converting the one langauge  to another language.
+
+InterOperability refers to sharing of data, from One Application to Another Application
+without changing native langauge, by means of some common Interconversion langauge.
+or
+Sharing of data from One App to another App without directly converting the native
+langauge is called InterOperability.
+
+for Eg:
+Android ---> Json ---> Java
+Python  ----> JSON ----> java
+Python -----> JSON ----> PHP
+php ----> JSON ---> SQL
+
+Main Feature of Inter-Operability is Plateform Indepent Nature.
+
+php --(serialisation/JSON Encoding)--> JSON --(Deserialisation/JSON Decode)-> SQL
+serialisation/JSON Encoding : converting One Type PL. to JSON Object
+Deserialisation/JSON Decode : converting JSON type to One Type of Data-type of PL.
+
+Eg:
+php ---> json_encode() ----> json (serialisation)
+Associative Array ----> Json
+ 
+Json ----> Json_decode() ---> Associative Array. (De-serialisation)
+What is Web-service?
+*********************
+
+Any Type of Service Access over the Internet is termed as Web-service, it can be any type
+of service and can use any protocol.
+
+What is Web-Api?.
+
+The Api which can be accessed only via web Interface or Internet as a medium is called 
+as Web-Api
+
+Java Application ---------> Oracle Local DB
+               localDriver Api
+Game Application ---------> Sound Driver
+		Audio Api
+
+Every web-api is Api but not every Api is web-api.
+
+What is soap?.
+It is type of web-api which can be used, to transport data/represent the data, in Form
+SimpleObject Access Protocol which used XML Data representation.
+
+Eg:
+<xml:nmps="version/xml-document-4">
+	<xml:Envelope>
+		<Employee>
+			<user id="1">
+				<email>Awi@gmail.com</email>
+				<password>1234</password>
+			</user>
+		</Employee>
+	</Envelope>
+</xml>
+Used for Very Heavy Data Transmission.
+Soap is highly scalable
+Soap is secure, why because you have access nth node for access real data node.
+Soap Architecture Can very very deep that it can be very Complex to handle
+
+what is REST?.
+REST: Stands for represtational State transfer,
+it is Type of Web-Api which works under http protocol.
+its representation is always, In Json Format
+It will very very Light weight,
+Easy to Handle, due to Organised data structure in form of Key and value pairs
+REST Api works on the basis HTTP METHOD 
+
+Request : GET
+Request : POST
+Request : Options
+Request : PATCH
+Request : PUT
+Request : DELETE
+Request : LOCK
+Request : HEAD
+...
+...
+...
+
+{
+"type":"GET",
+"version":"1.0.1",
+"status":true,
+"error":false,
+"code":200,
+"data":[
+	{"empid":1001,"name":"ravi","salary":10000},
+	{"empid":1002,"name":"prabhas","salary":70000},
+	{"empid":1003,"name":"vidhyut","salary":40000},
+	{"empid":1004,"name":"rajni","salary":30000},
+	{"empid":1005,"name":"moksh","salary":20000}
+]
+"keyword",[],
+}
+
+
+what is Postman?.
+postman is a client tool to send the pure http request to the Server.
+and testing Api's.
+postman has set of http method to Intersepct the REST API, by using GET,POST,PUT,PATCH,DELETE...
+and also has different payloads which can be binded as header, and body content.
+
+What is difference B/w REST & SOAP?.
+1. Rest : Respresentational State Transfer
+1. Soap : Simple Object Access Protocol
+
+2. Rest : uses lower Bandwith
+2. Soap : uses higher Bandwith
+
+3. Rest : its follows web-standards related http protocol  
+3. Soap : its follow xml structure and conventions, based on Envelope and web standards.
+	   
+4. Rest : lower security 
+4. Soap : Higher Security
+
+5. Rest : Easy to handle, easy to deserialise and serialise
+5. Soap : Very difficult to handle,
+
+6. Rest : data representation is in Json,yml
+6. Soap : data representation is in XML
+
+Api Related Terms:-
+1. http method : these are set of method which are defined to perform some 
+unique Operation
+In Rest Api 
+http methods are equivalent DB Operation
+
+C : create the data HTTP/1.1 POST
+R : read the data HTTP/1.1 GET
+U : update the data HTTP/1.1 PUT AND PATCH
+	PUT : full update
+	PATCH : partial update
+D : Delete the data  HTTP/1.1 DELETE
+
+
+HTTP has two version 1.1 and 2.1
+headers:- are the type of payload(information) attached to request before data.
+
+	headers can contain information like, http satus :200, or 404, 500
+	header has content Information like content-type:text/html content-type:
+	application/json, content-type:Image/jpeg all these are called MIME types.
+	header has allowed methods : GET,POST,...
+	headers can be used to check if request are Authentic or not
+	headers can be used to enable cors policy (content origin request security policy)
+
+Body Content : it refers to form data, supplied from form, or any client like postman
+		Types of Body data
+			1. formdata : form
+        		2. urlencoded data
+        		3. www-encoded data
+			4. raw data : Json 
+
+
+How to Api in PHP?
+******************
+
+ 
+
+
+
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

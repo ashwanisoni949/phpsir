@@ -1,0 +1,1 @@
+<h1> This is By-default index.php </h1>

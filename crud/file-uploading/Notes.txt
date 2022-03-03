@@ -1,0 +1,99 @@
+File Uploading:-
+File uploading does not mean the uploading of the medias to,
+database.
+it is because the database like mysql, oracle are capable of,
+uploading the data, in form of text format
+
+even though if you want to upload the data,(other than text such that)
+it has some media related mime type then we may go for,
+large text datatype, or BLOB Object.
+
+Note you can upload the Image to the db where large amount of 
+data is a constraint like mongodb, S3(simple storage service) bucket(AWS).
+
+In Order to upload the Data in the server using php
+1. Make sure your php Allowes file uploading feature
+    php.ini check allow_file_uploading : on
+    While Uploading data, you can upload max to max 20 files at once
+    and each file size can be 8MB post data.
+    but if you want you can Increase this limit you can do it by going to php.ini and modifying the setting.
+
+
+How to check php.ini information
+**********************************
+1. phpinfo() : its hold kundli(configuration,settings,versions,...) of php, via coding
+2. php.ini manuaully
+
+How to browser will upload the file to server
+*********************************************
+1. inorder to upload the file, 
+    method  = post
+    form : enctype : multipart/form-data
+    input type: file
+
+    file.save_file_path='c:/laragon/tmp'
+    goto php.ini
+    upload_tmp_dir='c:/laragon/tmp' 
+        if empty it will system temp
+        C:\Users\SAURAV~1\AppData\Local\Temp
+
+        How to find ini.
+        ***************
+        server/bin/php/php-version/php.ini
+                                    |php.ini-production
+                                    |php.ini-developement
+
+    browser ---> http request ---> (formdata)----> server (tmp folder)
+
+Follow three steps for file uploading
+1. $_FILES : 2 D array
+                1. name : name of the file
+                2. size : file size
+                3. error : any error occured during uploading not related file.
+                4. type : file type
+                5. tmp_name : tmp location where file is uploaded.
+
+2. use function move_uploaded_file($tmplocation,$newlocation);
+where file is finally uploaded.
+
+3. send the uploaded file name to the db.
+
+gallery
+    id file
+    1  1.png
+
+uploads
+    1.png
+    
+    $filenames = select('file')->table('gallery')->allrecords();
+
+    foreach($filenames as $images){
+        echo "<img src='uploads/{$images["file"]}'>"
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

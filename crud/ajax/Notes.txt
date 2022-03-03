@@ -1,0 +1,126 @@
+Ajax :-
+Ajax stands for Asynchronous Javascript and XML.(Json)
+Ajax will only work under live server environment.
+
+Because Ajax responds to the response send by server itself.
+This Server can like live server.
+xampp, laragon server any server infact cli-server.
+
+Ajax is useful if you want to perform any live change without 
+refresh within the web-page then Ajax is useful.
+
+syntax:-
+1. using xttp request object using javascript.   (pro)
+2. using JQuery with ajax.
+3. fetch Api ES 
+
+
+How to start with ajax:-
+1. we can run ajax request only after, when each and every element of, html is generated.
+
+Why?
+because if target any element by id and that element is not generated due to internet speed
+in that you will null as a target.
+
+$(document).ready(function(){
+
+});
+
+$("selector").method(function(){
+
+});
+
+b --> id = btn click --> paragaraph --> para ---> hii
+$(document).ready(function(){
+    $("#btn").click(function(){
+        $("#para").text("hy");
+        //or
+        $("#para").html("hy");
+    });
+});
+
+
+document.getElementById()   #
+document.getElementsByClassName() .
+document.getElementByTagname() Tagname
+document.getElementByName()  name attribute
+querySelectorAll() anything
+
+<h1 id="h">This is Heading</h1>
+$("#h")
+<h1 class="h">This is Heading</h1>
+$(".h")
+$("h1")
+<p id="para">This is paragaraph
+    <span class="font">
+        <b>This is Bold</b>
+    </span>
+</p
+
+$("#para .font b")
+
+.innerHTML => .html() get put => .html("hello")
+.innerText => .text() get .text() => .text("hello")
+.src => .attr('src') get .attr('src',"1.png") 
+.value => .val() get set .val("hello")
+.title=> .attr('title') get set=> .attr('title','saloni maurya')
+
+Events:-
+*******
+onclick => .click()
+onkeyup => .keyup()
+onkeypress => .keypress()
+onchange => .change()
+onmouseover =>.mouseover()
+onmouseleave => .mouseleave()
+onload => .load()
+ondblclick => .dblclick()
+onsubmit => .submit()
+onclick => .on("click")
+
+syntax of Ajax:-
+$.ajax({
+    url:"http://localhost:7000/getemp.php",
+    type:"POST|GET"
+    data:{key:value},
+    dataType:"jsonp|json|formdata|datastring",
+    success:function(response){
+
+    },
+    beforeSend:function(response){
+
+    },
+    error:function(xhr,error){
+
+    },
+    complete:function(response){
+
+    },
+    cache:true|false,
+    async:true|false,
+});
+
+
+How to verify ajax Request is Running or not.
+*********************************************
+goto console menu --> network tab 
+select xhr/fetch
+see the response  using preview response.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
